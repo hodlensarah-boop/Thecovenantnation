@@ -58,7 +58,7 @@ export function AboutPage() {
           <div className="lg:col-span-4">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-[#2E2A26] border border-[#E5DFD3]">
               <ResilientImage
-                src={TCN_IMAGES.pastorPojuPortrait.src}
+                src="/assets/aistudio/FB_IMG_1736596172123_cfb63b2f.jpg"
                 alt={TCN_IMAGES.pastorPojuPortrait.alt}
                 className="w-full h-full object-cover object-top"
               />

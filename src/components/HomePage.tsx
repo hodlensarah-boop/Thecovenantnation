@@ -539,7 +539,7 @@ export function HomePage({ onNavigate, onSelectCentreForVisit }: HomePageProps) 
           <div className="bg-[#23201D] border border-[#36312C] rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 mb-10">
             <div className="lg:col-span-5 aspect-[16/10] lg:aspect-auto bg-[#141210]">
               <ResilientImage
-                src={TCN_IMAGES.pastorPojuTeaching.src}
+                src="/assets/aistudio/1_W9HXxsIVgal3HsxaaXE-wA_3f967275.jpg"
                 alt={TCN_IMAGES.pastorPojuTeaching.alt}
                 className="w-full h-full object-cover object-top"
               />
