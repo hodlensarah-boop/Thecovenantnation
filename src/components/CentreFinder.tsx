@@ -98,18 +98,7 @@ export function CentreFinder({ onSelectCentreForVisit, defaultExpanded = false }
             </div>
           </div>
 
-          <div className="mt-3 pt-3 border-t border-[#EFEAE0] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-[#6B645B]">
-            <p className="tabular-nums">
-              Showing {displayedCentres.length} of {filteredCentres.length} verified centres · Source:{' '}
-              <a
-                href={TCN_CONTACT.officialCentresUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-[#C85A17]"
-              >
-                insightsforliving.org/newcenters
-              </a>
-            </p>
+          <div className="mt-3 pt-3 border-t border-[#EFEAE0] flex items-center justify-end text-xs text-[#6B645B]">
             <p>
               Helpline ({TCN_CONTACT.hours}):{' '}
               <a href="tel:+2348186000021" className="font-medium text-[#191715] hover:text-[#C85A17]">
