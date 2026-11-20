@@ -173,7 +173,7 @@ export function HomePage({ onNavigate, onSelectCentreForVisit }: HomePageProps) 
             {/* Editorial Welcome Message */}
             <div className="lg:col-span-7">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#C85A17] mb-3">
-                A MESSAGE FROM OUR FOUNDER
+                A Personal Welcome from Our Lead Pastor
               </p>
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-[42px] font-semibold tracking-tight text-[#191715] leading-[1.12]">
                 A SPIRITUAL FAMILY. A PLACE TO GROW.
