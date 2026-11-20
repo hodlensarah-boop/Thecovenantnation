@@ -118,7 +118,7 @@ export function HomePage({ onNavigate, onSelectCentreForVisit }: HomePageProps) 
             <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-3.5">
               <button
                 type="button"
-                onClick={() => onNavigate('im-new', 'visit-planner')}
+                onClick={() => onNavigate('im-new')}
                 className="min-h-[48px] px-7 py-3.5 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white bg-[#C85A17] hover:bg-[#AD4B10] rounded-md transition-colors duration-150 whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C85A17]"
               >
                 PLAN YOUR FIRST VISIT
