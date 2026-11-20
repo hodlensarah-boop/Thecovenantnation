@@ -141,8 +141,11 @@ export function HomePage({ onNavigate, onSelectCentreForVisit }: HomePageProps) 
       {/* BOLD STANDALONE STATEMENT BEFORE PASTOR & WIFE SECTION */}
       <section className="py-12 sm:py-16 bg-[#FBF9F5] border-t border-[#E5DFD3]">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="font-serif text-3xl sm:text-5xl lg:text-[54px] font-bold tracking-tight text-[#191715] leading-[1.1]">
-            There&rsquo;s a place for you here.
+          <p className="font-['Playfair_Display',Georgia,serif] text-3xl sm:text-5xl lg:text-[56px] font-bold tracking-tight text-[#191715] leading-[1.12]">
+            <span className="italic font-semibold">There&rsquo;s a </span>
+            <span className="font-black tracking-[0.02em] text-[#C85A17]">PLACE</span>
+            <span className="italic font-semibold"> for you </span>
+            <span className="font-black tracking-[0.02em] text-[#C85A17]">HERE</span>.
           </p>
         </div>
       </section>

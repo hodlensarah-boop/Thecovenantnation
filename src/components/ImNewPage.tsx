@@ -116,12 +116,18 @@ export function ImNewPage({ preselectedCentreId, onNavigate }: ImNewPageProps) {
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-3.5">
-                <a
-                  href="#visit-planner"
-                  className="min-h-[46px] px-6 py-3 inline-flex items-center justify-center text-xs font-semibold uppercase tracking-wider text-white bg-[#C85A17] hover:bg-[#AD4B10] rounded-md transition-colors"
+                <button
+                  type="button"
+                  onClick={() => {
+                    const plannerEl = document.getElementById('visit-planner');
+                    if (plannerEl) {
+                      plannerEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }}
+                  className="min-h-[46px] px-6 py-3 inline-flex items-center justify-center text-xs font-semibold uppercase tracking-wider text-white bg-[#C85A17] hover:bg-[#AD4B10] rounded-md transition-colors cursor-pointer"
                 >
                   Plan Your Visit Below
-                </a>
+                </button>
                 <a
                   href={TCN_CONTACT.newToChurchFormUrl}
                   target="_blank"
@@ -186,7 +192,7 @@ export function ImNewPage({ preselectedCentreId, onNavigate }: ImNewPageProps) {
       </section>
 
       {/* Interactive Plan Your First Visit Planner */}
-      <section id="visit-planner" className="py-16 sm:py-24">
+      <section id="visit-planner" className="py-16 sm:py-24 scroll-mt-20">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             <div className="lg:col-span-7 bg-white border border-[#E5DFD3] rounded-2xl p-6 sm:p-9">

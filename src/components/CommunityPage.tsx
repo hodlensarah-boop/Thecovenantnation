@@ -129,19 +129,23 @@ export function CommunityPage() {
                   <h3 className="mt-1 font-serif text-2xl font-semibold text-[#191715]">{m.name}</h3>
                   <p className="mt-2.5 text-sm text-[#5C564E] leading-relaxed">{m.description}</p>
                 </div>
-                <div className="mt-5 pt-4 border-t border-[#EFEAE0] flex items-center justify-between gap-3">
+                <div className="mt-5 pt-4 border-t border-[#EFEAE0] flex flex-wrap items-center justify-between gap-x-4 gap-y-2.5">
                   <a
                     href={m.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#C85A17] hover:underline"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#C85A17] hover:underline whitespace-nowrap shrink-0"
                   >
                     <span>Visit Official Website</span>
-                    <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
+                    <ExternalLink className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
                   </a>
                   {m.email && (
-                    <a href={`mailto:${m.email}`} className="text-xs text-[#5C564E] hover:text-[#191715]">
-                      {m.email}
+                    <a
+                      href={`mailto:${m.email}`}
+                      className="inline-flex items-center gap-1.5 min-w-0 max-w-full text-xs text-[#5C564E] hover:text-[#191715] transition-colors"
+                    >
+                      <Mail className="w-3.5 h-3.5 shrink-0 text-[#787166]" aria-hidden="true" />
+                      <span className="break-all">{m.email}</span>
                     </a>
                   )}
                 </div>
@@ -200,10 +204,10 @@ export function CommunityPage() {
                 <div className="mt-4 pt-3 border-t border-[#EFEAE0]">
                   <a
                     href={`mailto:${dept.email}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-medium text-[#C85A17] hover:underline"
+                    className="inline-flex items-center gap-1.5 min-w-0 max-w-full text-xs font-medium text-[#C85A17] hover:underline"
                   >
-                    <Mail className="w-3.5 h-3.5" aria-hidden="true" />
-                    <span>{dept.email}</span>
+                    <Mail className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
+                    <span className="break-all">{dept.email}</span>
                   </a>
                 </div>
               </div>
