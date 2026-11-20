@@ -1,0 +1,6 @@
+{
+  "name": "The Covenant Nation — Welcome Home",
+  "description": "Welcome to The Covenant Nation Church. Find a worship centre near you, grow in God's Word, and discover a spiritual family to walk with.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
