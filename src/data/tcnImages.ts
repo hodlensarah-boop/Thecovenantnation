@@ -15,6 +15,7 @@ import pastorTeachingLight from '../assets/tcn/hero-cand-85.jpg';
 import childrenMinistry from '../assets/tcn/card-children.jpg';
 import jesusTribeMinistry from '../assets/tcn/card-jesustribe.jpg';
 import youthMinistry from '../assets/tcn/card-youth.jpg';
+import startJourneyBelong from '../assets/tcn/pg-6z7a6181.jpg';
 
 export interface HeroSlideImage {
   id: string;
@@ -59,6 +60,10 @@ export const TCN_IMAGES = {
   communityFellowship: {
     src: communityFellowship,
     alt: 'Joyful members of The Covenant Nation smiling warmly together in community',
+  },
+  startJourneyBelong: {
+    src: startJourneyBelong,
+    alt: 'Warm multi-generational Covenant Nation family members smiling and worshipping side by side in unity',
   },
   communityJoy: {
     src: communityJoy,

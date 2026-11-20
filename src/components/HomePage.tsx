@@ -308,8 +308,8 @@ export function HomePage({ onNavigate, onSelectCentreForVisit }: HomePageProps) 
               <div>
                 <div className="aspect-[4/3] overflow-hidden bg-[#EFEAE0]">
                   <ResilientImage
-                    src={TCN_IMAGES.communityFellowship.src}
-                    alt={TCN_IMAGES.communityFellowship.alt}
+                    src={TCN_IMAGES.startJourneyBelong.src}
+                    alt={TCN_IMAGES.startJourneyBelong.alt}
                     className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
                   />
                 </div>
