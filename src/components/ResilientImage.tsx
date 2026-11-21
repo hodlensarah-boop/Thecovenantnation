@@ -41,6 +41,7 @@ export function ResilientImage({
       src={src}
       alt={alt}
       loading={loading}
+      decoding="async"
       fetchPriority={fetchPriority}
       referrerPolicy="no-referrer"
       onError={() => setHasError(true)}

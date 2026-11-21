@@ -71,6 +71,7 @@ export function HomePage({ onNavigate, onSelectCentreForVisit }: HomePageProps) 
               src={slide.src}
               alt={slide.alt}
               loading={index === 0 ? 'eager' : 'lazy'}
+              decoding="async"
               fetchPriority={index === 0 ? 'high' : 'auto'}
               aria-hidden={!isActive}
               className={`absolute inset-0 w-full h-full object-cover ${slide.objectPosition} transition-opacity duration-1000 ease-out ${

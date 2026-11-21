@@ -11,18 +11,32 @@ import { PageRoute } from './data/tcnData';
 
 const VALID_ROUTES: PageRoute[] = ['home', 'im-new', 'grow', 'community', 'watch-listen', 'about'];
 
-function getRouteFromHash(): PageRoute {
+function getRouteFromLocation(): PageRoute {
   const hash = window.location.hash.replace('#', '').split('/')[0] as PageRoute;
-  return VALID_ROUTES.includes(hash) ? hash : 'home';
+  if (VALID_ROUTES.includes(hash)) return hash;
+  const pathRoute = window.location.pathname.replace(/^\/+|\/+$/g, '').split('/')[0] as PageRoute;
+  return VALID_ROUTES.includes(pathRoute) ? pathRoute : 'home';
 }
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<PageRoute>(() => getRouteFromHash());
+  const [currentPage, setCurrentPage] = useState<PageRoute>(() => getRouteFromLocation());
   const [selectedCentreId, setSelectedCentreId] = useState<string>('iganmu');
 
   useEffect(() => {
+    const canonicalUrl = `${window.location.origin}${window.location.pathname}`;
+    const canonicalEl = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (canonicalEl) {
+      canonicalEl.href = canonicalUrl;
+    }
+    const ogUrlEl = document.querySelector<HTMLMetaElement>('meta[property="og:url"]');
+    if (ogUrlEl) {
+      ogUrlEl.content = canonicalUrl;
+    }
+  }, [currentPage]);
+
+  useEffect(() => {
     const onHashChange = () => {
-      setCurrentPage(getRouteFromHash());
+      setCurrentPage(getRouteFromLocation());
     };
     window.addEventListener('hashchange', onHashChange);
     return () => window.removeEventListener('hashchange', onHashChange);
